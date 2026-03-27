@@ -1,16 +1,16 @@
-# bmi-prototype
+# BMI-prototype
 
-A working prototype of the **BUSCO-Missing Investigator (BMI)** pipeline —
+A working prototype of the BUSCO-Missing(BMI) pipeline —
 built as part of a Google Summer of Code 2026 proposal for EMBL-EBI (Ensembl).
 
 BMI explains *why* genes are reported as Missing or Fragmented by BUSCO,
 and provides ranked, confidence-scored reason codes with actionable recommendations.
 
 This prototype implements:
-**Module 1 — BUSCO Parser** (`src/parser.py`): reads `full_table.tsv`, supports BUSCO v4 and v5
-**Module 2 — Genome Diagnostics** (`src/diagnostics.py`): contig-edge proximity and N-gap detection
-**Module 4 — Evidence Aggregator** (`src/aggregator.py`): reason code assignment and confidence scoring
-**Module 5 — Report Generator** (`src/reporter.py`): TSV summary and plain-text report
+Module 1 — BUSCO Parser(`src/parser.py`): reads `full_table.tsv`, supports BUSCO v4 and v5
+Module 2 — Genome Diagnostics (`src/diagnostics.py`): contig-edge proximity and N-gap detection
+Module 4 — Evidence Aggregator (`src/aggregator.py`): reason code assignment and confidence scoring
+Module 5 — Report Generator (`src/reporter.py`): TSV summary and plain-text report
 
 Built directly in response to mentor feedback: "sketch a simple prototype that parses
 BUSCO results and attaches preliminary diagnostic labels."*
@@ -27,10 +27,10 @@ bmi-prototype/
 │   ├── aggregator.py   # Module 4: reason code scorer
 │   └── reporter.py     # Module 5: TSV + text report generator
 ├── tests/
-│   └── test_bmi.py     # 22 pytest tests across all modules
+│   └── test_bmi.py     
 ├── data/
-│   ├── full_table.tsv  # Sample BUSCO output (synthetic)
-│   └── assembly.fasta  # Sample assembly FASTA (synthetic)
+│   ├── full_table.tsv  # Sample BUSCO output 
+│   └── assembly.fasta  # Sample assembly FASTA
 ├── main.py             # Pipeline entry point
 ├── requirements.txt
 └── README.md
@@ -41,9 +41,6 @@ bmi-prototype/
 ## Setup
 
 ```bash
-git clone https://github.com/kirat-bit/bmi-prototype.git
-cd bmi-prototype
-
 python -m venv venv
 source venv/bin/activate       # Mac/Linux
 # or: .\venv\Scripts\activate  # Windows
@@ -53,10 +50,10 @@ pip install -r requirements.txt
 
 ---
 
-## Usage
+Usage
 
 ```bash
-# BUSCO output only (assigns reason codes from scores + coordinates)
+# BUSCO output only
 python main.py --busco data/full_table.tsv
 
 # With assembly FASTA (enables contig-edge and gap detection)
@@ -66,7 +63,7 @@ python main.py --busco data/full_table.tsv --assembly data/assembly.fasta
 python main.py --busco data/full_table.tsv --assembly data/assembly.fasta --out results/
 ```
 
-### Example terminal output
+ Example terminal output
 
 ```
 [BMI] Parsing BUSCO table: data/full_table.tsv
@@ -98,11 +95,11 @@ python main.py --busco data/full_table.tsv --assembly data/assembly.fasta --out 
 pytest tests/ -v
 ```
 
-Expected output: **22 passed**
+Expected output: 22 passed
 
 ---
 
-## Reason code vocabulary
+Reason code vocabulary
 
 | Code | Level | Meaning |
 |------|-------|---------|
@@ -115,13 +112,12 @@ Expected output: **22 passed**
 
 ---
 
-## Relevance to BMI
+Relevance to BMI
 
 This prototype demonstrates the core diagnostic loop of the full BMI pipeline:
 
-```
+
 full_table.tsv → Parser → Diagnostics → Aggregator → Report
-```
 
 The full pipeline (proposed for GSoC 2026) will extend this with:
 - BLAST-based homology search (Module 2b)
@@ -134,5 +130,5 @@ The full pipeline (proposed for GSoC 2026) will extend this with:
 
 ## Author
 
-**Jaskirat Singh**
+Jaskirat Singh
 [GitHub](https://github.com/kirat-bit) 
