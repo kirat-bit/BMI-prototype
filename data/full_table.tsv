@@ -1,0 +1,18 @@
+# BUSCO version is: 5.4.3
+# The lineage dataset is: insecta_odb10 (Creation date: 2020-09-10, number of species: 75, number of BUSCOs: 1367)
+# Busco id	Status	Sequence	Gene Start	Gene End	Strand	Score	Length
+EOG090W00A9	Complete	contig_001	145230	147890	+	987.3	892
+EOG090W00B1	Complete	contig_001	289100	291450	-	1023.7	756
+EOG090W00C3	Fragmented	contig_004	3820	4210	+	43.2	187
+EOG090W00D5	Missing	N/A	N/A	N/A	N/A	N/A	N/A
+EOG090W00E7	Missing	N/A	N/A	N/A	N/A	N/A	N/A
+EOG090W00F2	Complete	contig_002	78900	81200	+	876.1	934
+EOG090W00G8	Fragmented	contig_007	99821	99995	+	38.7	94
+EOG090W00H4	Missing	N/A	N/A	N/A	N/A	N/A	N/A
+EOG090W00I6	Complete	contig_003	412000	415300	-	1102.4	1023
+EOG090W00J9	Fragmented	contig_002	81150	81490	-	29.1	112
+EOG090W00K1	Missing	N/A	N/A	N/A	N/A	N/A	N/A
+EOG090W00L3	Complete	contig_005	220100	223400	+	934.5	867
+EOG090W00M5	Fragmented	contig_009	1240	1589	+	51.8	201
+EOG090W00N7	Missing	N/A	N/A	N/A	N/A	N/A	N/A
+EOG090W00O2	Complete	contig_006	654300	657100	-	789.2	798
